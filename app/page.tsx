@@ -1,7 +1,14 @@
+import Navbar from '@/components/Navbar';
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Capturing moments with Alfin Ilham Maulidi.</h1>
-    </main>
+    <>
+      <main className='text-white'>
+        <Navbar />
+        <div className='bg-slate-800 pt-20'>
+          <h1 className=''>Capturing moments with Alfin Ilham Maulidi.</h1>
+        </div>
+      </main>
+    </>
   );
 }
