@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Hamburger from './Hamburger';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import clsx from 'clsx';
 
 const menuList = [
   {
@@ -20,19 +21,35 @@ const menuList = [
 
 const Navbar = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
+  const [isFixed, setIsFixed] = useState<boolean>(false);
+  const { scrollY } = useScroll();
 
   const showMenuToggle = () => {
     setIsShow(!isShow);
   };
 
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 40) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+  });
+
   return (
-    <div className='fixed w-full'>
+    <div className={clsx('w-full', isFixed && 'fixed top-0 bg-white text-black py-3')}>
       {/* Navbar in mobile view */}
-      <Hamburger showMenuToggle={showMenuToggle} />
+      <Hamburger
+        showMenuToggle={showMenuToggle}
+        isFixed={isFixed}
+      />
       <AnimatePresence>
         {isShow && (
           <motion.ul
-            className='md:hidden top-14 inset-x-0 absolute py-8 flex flex-col gap-6 bg-white text-center text-black font-semibold border-y-2 shadow-md z-10'
+            className={clsx(
+              'md:hidden inset-x-0 absolute py-8 flex flex-col gap-6 bg-white text-center text-black font-semibold border-y-2 shadow-md z-10',
+              isFixed ? 'top-16' : 'top-24'
+            )}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -65,7 +82,12 @@ const Navbar = () => {
           >
             <a
               href={menu.link}
-              className='px-3 py-1 rounded-md transition-colors hover:bg-white hover:text-black'
+              className={clsx(
+                'px-3 py-1 rounded-md transition-colors',
+                isFixed
+                  ? 'hover:bg-black hover:text-white'
+                  : 'hover:bg-white hover:text-black'
+              )}
             >
               {menu.name}
             </a>
