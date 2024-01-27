@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    if (latest > 40) {
+    if (latest > 60) {
       setIsFixed(true);
     } else {
       setIsFixed(false);
@@ -37,7 +37,12 @@ const Navbar = () => {
   });
 
   return (
-    <div className={clsx('w-full', isFixed && 'fixed top-0 bg-white text-black py-3')}>
+    <div
+      className={clsx(
+        'w-full',
+        isFixed && 'fixed top-0 bg-white text-black py-3 shadow-md'
+      )}
+    >
       {/* Navbar in mobile view */}
       <Hamburger
         showMenuToggle={showMenuToggle}
