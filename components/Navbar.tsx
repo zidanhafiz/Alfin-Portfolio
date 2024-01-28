@@ -3,7 +3,12 @@ import { useState } from 'react';
 import Hamburger from './Hamburger';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const menuList = [
+type MenuList = {
+  name: string;
+  link: string;
+};
+
+const menuList: MenuList[] = [
   {
     name: 'Home',
     link: '#home',
