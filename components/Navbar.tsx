@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='w-full fixed top-0 py-4 md:py-10'>
+    <nav>
       {/* Navbar in mobile view */}
       <Hamburger showMenuToggle={showMenuToggle} />
       <AnimatePresence>
@@ -71,7 +71,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 
