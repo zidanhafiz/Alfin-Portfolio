@@ -8,7 +8,7 @@ export default function Home() {
       <header className='w-full fixed top-0 py-4 md:py-10'>
         <Navbar />
       </header>
-      <main className='bg-gradient-to-r from-black via-gray-900 to-gray-800 min-h-screen'>
+      <main className='bg-gradient-to-tr from-black via-black to-slate-900 min-h-screen'>
         <Hero />
         <Hero />
       </main>
