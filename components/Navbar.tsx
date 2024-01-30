@@ -55,9 +55,6 @@ const Navbar = () => {
                 key={menu.name}
                 className='bg-white py-4'
                 variants={itemsVariants_2}
-                transition={{
-                  duration: 0.5,
-                }}
               >
                 <a
                   href={menu.link}
