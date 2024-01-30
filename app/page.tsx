@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from './Hero';
-import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Home() {
   return (

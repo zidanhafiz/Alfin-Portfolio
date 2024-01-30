@@ -1,37 +1,43 @@
 'use client';
-import { inter, limelight } from '@/utils/fonts';
+import { inter } from '@/utils/fonts';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaTiktok } from 'react-icons/fa';
+import SvgGradient from '@/components/SvgGradient';
+import { containerVariants, itemsVariants, itemsVariants_2 } from '@/utils/variants';
 
-const titleVariants = {
-  hidden: {
-    opacity: 0,
-    y: 100,
+const sosMedList = [
+  {
+    logo: () => <FaFacebook style={{ fill: 'url(#blue-gradient)' }} />,
+    link: 'https://facebook.com',
   },
-  inView: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-    },
+  {
+    logo: () => <FaInstagram style={{ fill: 'url(#blue-gradient)' }} />,
+    link: 'https://instagram.com',
   },
-};
+  {
+    logo: () => <FaXTwitter style={{ fill: 'url(#blue-gradient)' }} />,
+    link: 'https://twitter.com',
+  },
+  {
+    logo: () => <FaTiktok style={{ fill: 'url(#blue-gradient)' }} />,
+    link: 'https://tiktok.com',
+  },
+];
 
 const imgVariants = {
   hidden: {
     opacity: 0,
-    rotateY: 40,
-    rotateX: -15,
-    rotateZ: 8,
   },
   inView: {
     opacity: 1,
-    rotateY: 8,
-    rotateX: -4,
-    rotateZ: 2,
     transition: {
       duration: 1,
+      delay: 0.3,
     },
   },
 };
@@ -47,35 +53,38 @@ const ctaVariants = {
 
 const Hero = () => {
   return (
-    <div id='home'>
-      <div className='px-5 md:mx-auto h-screen flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-32'>
-        <div>
+    <div
+      id='home'
+      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen'
+    >
+      <div className='row-start-2 px-5 md:mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='inView'
+        >
           <motion.h1
             className={clsx(
               inter.className,
               'bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 inline-block text-transparent bg-clip-text',
               'text-center md:text-start text-2xl md:text-5xl md:leading-[1.2]'
             )}
-            variants={titleVariants}
-            initial='hidden'
-            whileInView='inView'
+            variants={itemsVariants}
           >
             Capturing moments with
             <br /> Alfin Ilham Maulidi.
           </motion.h1>
           <motion.p
             className='mt-4 text-gray-300 text-center md:text-start'
-            variants={titleVariants}
-            initial='hidden'
-            whileInView='inView'
+            variants={itemsVariants}
           >
             Photograhy & Videography
           </motion.p>
+
+          {/* Buttons Column */}
           <motion.div
             className='block mx-auto md:mx-0 w-fit mt-7 md:mt-10'
-            variants={titleVariants}
-            initial='hidden'
-            whileInView='inView'
+            variants={itemsVariants}
           >
             <motion.button
               className='bg-gradient-to-r from-purple-800 to-indigo-600 border border-transparent hover:border-white font-semibold px-4 py-2 rounded'
@@ -94,7 +103,9 @@ const Hero = () => {
               My Projects
             </motion.button>
           </motion.div>
-        </div>
+        </motion.div>
+
+        {/* Image Column */}
         <motion.div
           variants={imgVariants}
           initial='hidden'
@@ -109,6 +120,33 @@ const Hero = () => {
           />
         </motion.div>
       </div>
+
+      {/* Sosmed Column */}
+      <motion.ul
+        className='row-start-3 flex justify-center gap-10'
+        variants={containerVariants}
+        initial='hidden'
+        whileInView='inView'
+      >
+        <SvgGradient />
+        {sosMedList.map((list) => (
+          <motion.li
+            key={list.link}
+            variants={itemsVariants_2}
+            transition={{
+              duration: 0.7,
+            }}
+          >
+            <a
+              href={list.link}
+              target='_blank'
+              className='text-lg'
+            >
+              {list.logo()}
+            </a>
+          </motion.li>
+        ))}
+      </motion.ul>
     </div>
   );
 };
