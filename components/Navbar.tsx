@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Hamburger from './Hamburger';
 import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
+import { containerVariants, itemsVariants_2 } from '@/utils/variants';
 
 type MenuList = {
   name: string;
@@ -25,58 +27,76 @@ const menuList: MenuList[] = [
 
 const Navbar = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
+
   const showMenuToggle = () => {
     setIsShow(!isShow);
   };
 
   return (
-    <nav>
+    <motion.nav
+      className='z-50'
+      variants={containerVariants}
+      initial='hidden'
+      animate='inView'
+    >
       {/* Navbar in mobile view */}
       <Hamburger showMenuToggle={showMenuToggle} />
       <AnimatePresence>
         {isShow && (
           <motion.ul
-            className='md:hidden inset-x-0 absolute py-8 flex flex-col gap-6 bg-white text-center text-black font-semibold border-y-2 shadow-md z-10 top-16'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            className='md:hidden inset-x-0 absolute flex flex-col text-center text-black font-semibold shadow-md top-16'
+            variants={containerVariants}
+            initial='hidden'
+            animate='inView'
+            exit='hidden'
           >
             {menuList.map((menu) => (
-              <li
+              <motion.li
                 key={menu.name}
-                className='mx-auto'
+                className='bg-white py-4'
+                variants={itemsVariants_2}
+                transition={{
+                  duration: 0.5,
+                }}
               >
                 <a
                   href={menu.link}
-                  className='hover:underline'
+                  className={clsx('hover:underline')}
                   onClick={showMenuToggle}
                 >
                   {menu.name}
                 </a>
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         )}
       </AnimatePresence>
 
       {/* Navbar in desktop view */}
-      <ul className='hidden md:flex justify-center gap-20'>
+      <motion.ul
+        className='hidden md:flex justify-center gap-20'
+        variants={containerVariants}
+        initial='hidden'
+        animate='inView'
+      >
         {menuList.map((menu) => (
-          <li
+          <motion.li
             key={menu.name}
-            className='font-semibold'
+            variants={itemsVariants_2}
+            transition={{ duration: 0.7 }}
           >
             <a
               href={menu.link}
-              className='px-3 py-1 rounded-md transition-colors hover:bg-white hover:text-black'
+              className={clsx(
+                'px-3 py-1 rounded-md transition-colors hover:bg-white hover:text-black'
+              )}
             >
               {menu.name}
             </a>
-          </li>
+          </motion.li>
         ))}
-      </ul>
-    </nav>
+      </motion.ul>
+    </motion.nav>
   );
 };
 
