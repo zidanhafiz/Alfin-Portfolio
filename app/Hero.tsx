@@ -55,19 +55,20 @@ const Hero = () => {
   return (
     <div
       id='home'
-      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen'
+      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen mb-24'
     >
-      <div className='row-start-2 px-5 md:mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
+      <div className='row-start-2 px-5 md:mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='inView'
+          viewport={{ once: true }}
         >
           <motion.h1
             className={clsx(
               inter.className,
               'bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 inline-block text-transparent bg-clip-text',
-              'text-center md:text-start text-2xl md:text-5xl md:leading-[1.2]'
+              'text-center md:text-start text-3xl md:text-5xl md:leading-[1.2]'
             )}
             variants={itemsVariants}
           >
@@ -110,6 +111,7 @@ const Hero = () => {
           variants={imgVariants}
           initial='hidden'
           whileInView='inView'
+          viewport={{ once: true }}
         >
           <Image
             src='/images/hero-closeup.png'
@@ -127,6 +129,7 @@ const Hero = () => {
         variants={containerVariants}
         initial='hidden'
         whileInView='inView'
+        viewport={{ once: true }}
       >
         <SvgGradient />
         {sosMedList.map((list) => (
