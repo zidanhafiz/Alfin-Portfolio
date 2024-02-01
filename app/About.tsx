@@ -34,7 +34,7 @@ const lineVariants = {
 
 const About = () => {
   return (
-    <div className='h-fit py-20 bg-gradient-to-l from-purple-900 via-violet-800 to-indigo-800 flex flex-col items-center justify-center'>
+    <div className='h-fit my-24 py-20 bg-gradient-to-l from-purple-900 via-violet-800 to-indigo-800 flex flex-col items-center justify-center'>
       <motion.article
         className='max-w-4xl px-5'
         variants={containerVariants}

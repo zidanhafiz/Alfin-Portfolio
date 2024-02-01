@@ -55,7 +55,7 @@ const Hero = () => {
   return (
     <div
       id='home'
-      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen mb-24'
+      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen'
     >
       <div className='row-start-2 px-5 md:mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
         <motion.div
