@@ -17,19 +17,22 @@ const ImagesContainer = ({ images, index }: ImagesContainerProps) => {
       viewport={{ once: true }}
     >
       {images.map((image, index) => (
-        <motion.div
+        <motion.a
           key={index}
           variants={itemsVariants}
           className='w-content'
+          href={image}
+          target='_blank'
+          whileHover={{ y: -20 }}
         >
           <Image
             src={image}
-            width={800}
-            height={800}
+            width={600}
+            height={600}
             alt='nature'
-            className='w-[170px] md:w-[250px] rounded-lg'
+            className='w-[160px] md:w-[250px] rounded-lg'
           />
-        </motion.div>
+        </motion.a>
       ))}
     </motion.div>
   );

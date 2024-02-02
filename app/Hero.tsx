@@ -10,7 +10,12 @@ import { FaTiktok } from 'react-icons/fa';
 import SvgGradient from '@/components/SvgGradient';
 import { containerVariants, itemsVariants, itemsVariants_2 } from '@/utils/variants';
 
-const sosMedList = [
+type SosMedList = {
+  logo: () => JSX.Element;
+  link: string;
+};
+
+const sosMedList: SosMedList[] = [
   {
     logo: () => <FaFacebook style={{ fill: 'url(#blue-gradient)' }} />,
     link: 'https://facebook.com',

@@ -59,7 +59,7 @@ const Projects = () => {
       }}
     >
       <motion.h2
-        className='text-3xl md:text-5xl text-center bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 block text-transparent bg-clip-text'
+        className='text-3xl md:text-4xl text-center bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 block text-transparent bg-clip-text'
         variants={itemsVariants}
         transition={{
           delay: 1,

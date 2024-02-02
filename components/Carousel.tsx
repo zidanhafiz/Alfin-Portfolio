@@ -43,7 +43,10 @@ const Carousel = ({ projects, selectedTab }: CarouselProps) => {
               stiffness: 50,
             }}
           >
-            <ImagesContainer images={project.links} index={index} />
+            <ImagesContainer
+              images={project.links}
+              index={index}
+            />
           </motion.div>
         ))}
       </div>
