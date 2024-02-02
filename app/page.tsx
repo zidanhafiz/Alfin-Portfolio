@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from './Hero';
 import About from './About';
+import Projects from './Projects';
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
       <main className='bg-gradient-to-tr from-black via-black to-slate-900'>
         <Hero />
         <About />
+        <Projects />
+        <div>
+          <h2>Hello</h2>
+        </div>
       </main>
     </>
   );
