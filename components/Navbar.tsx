@@ -34,7 +34,6 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className='z-50'
       variants={containerVariants}
       initial='hidden'
       animate='inView'
