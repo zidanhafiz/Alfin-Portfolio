@@ -1,7 +1,7 @@
 'use client';
-import { limelight } from '@/utils/fonts';
+import { teko } from '@/utils/fonts';
 import { motion } from 'framer-motion';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { containerVariants } from '@/utils/variants';
 
 const itemsVariants = {
@@ -14,7 +14,7 @@ const itemsVariants = {
     x: 0,
     transition: {
       type: 'spring',
-      stiffness: 200,
+      stiffness: 100,
       duration: 0.7,
     },
   },
@@ -34,23 +34,25 @@ const lineVariants = {
 
 const About = () => {
   return (
-    <div className='h-fit my-24 py-20 bg-gradient-to-l from-purple-900 via-violet-800 to-indigo-800 flex flex-col items-center justify-center'>
+    <div className='h-screen flex flex-col items-center justify-center bg-[url("/images/about.png")] bg-auto bg-top bg-fixed'>
       <motion.article
         className='max-w-4xl px-5'
         variants={containerVariants}
         initial='hidden'
         whileInView='inView'
-        viewport={{ once: true }}
       >
         <motion.h2
-          className={clsx(limelight.className, 'text-4xl md:text-5xl md:leading-[1.2em]')}
+          className={clsx(
+            teko.className,
+            'font-bold text-4xl md:text-5xl md:leading-[1.2em]'
+          )}
           variants={itemsVariants}
         >
-          My Name is <br />
-          Alfin Ilham Maulidi
+          HELLO, <br />
+          I&apos;M ALFIN
         </motion.h2>
         <motion.div
-          className='bg-white w-1/3 h-1 mt-5 md:mt-8 mb-8 md:mb-12'
+          className='bg-white w-14 h-1 mt-5 md:mt-8 mb-8 md:mb-12'
           variants={lineVariants}
         ></motion.div>
         <motion.p
