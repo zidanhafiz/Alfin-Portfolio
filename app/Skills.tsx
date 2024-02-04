@@ -3,6 +3,7 @@ import { FaPenNib, FaCameraRetro } from 'react-icons/fa';
 import { BsPersonVideo3 } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { containerVariants, itemsVariants } from '@/utils/variants';
+import Heading from '@/components/Heading';
 
 type Skill = {
   name: string;
@@ -30,36 +31,39 @@ const skills: Skill[] = [
 
 const Skills = () => {
   return (
-    <motion.div
-      className='px-4 py-28 md:py-36 h-fit bg-[url("/images/skills.png")] bg-auto bg-top bg-fixed'
-      variants={containerVariants}
-      initial='hidden'
-      whileInView='inView'
-      viewport={{ once: true }}
+    <div
+      id='skills'
+      className='px-4 py-24 flex items-center justify-center min-h-screen bg-[url("/images/skills.jpg")] bg-top bg-auto bg-fixed'
     >
-      <motion.h2
-        className='text-3xl md:text-4xl text-center font-semibold'
-        variants={itemsVariants}
-      >
-        My Skills
-      </motion.h2>
       <motion.div
-        className='mt-20 md:mt-28 flex flex-col md:flex-row justify-center gap-12 md:gap-20'
         variants={containerVariants}
+        initial='hidden'
+        whileInView='inView'
       >
-        {skills.map((skill) => (
-          <motion.div
-            key={skill.name}
-            className='flex flex-col items-center text-center py-8 px-5 md:max-w-[400px] rounded-xl backdrop-blur-sm border'
-            variants={itemsVariants}
-          >
-            <h6 className='font-semibold'>{skill.name.toUpperCase()}</h6>
-            <p className='mt-5 mb-7'>{skill.desc}</p>
-            <span className='text-3xl'>{skill.icon()}</span>
-          </motion.div>
-        ))}
+        <Heading
+          variants={itemsVariants}
+          type='solid'
+        >
+          My Skills
+        </Heading>
+        <motion.div
+          className='mt-20 md:mt-24 flex flex-col md:flex-row justify-center gap-12 md:gap-20'
+          variants={containerVariants}
+        >
+          {skills.map((skill) => (
+            <motion.div
+              key={skill.name}
+              className='flex flex-col items-center text-center py-8 px-5 md:max-w-[400px] rounded-xl backdrop-blur-lg backdrop-brightness-75 border'
+              variants={itemsVariants}
+            >
+              <h6 className='font-semibold'>{skill.name.toUpperCase()}</h6>
+              <p className='mt-5 mb-7'>{skill.desc}</p>
+              <span className='text-3xl'>{skill.icon()}</span>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

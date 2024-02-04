@@ -1,5 +1,6 @@
 'use client';
 import Carousel from '@/components/Carousel';
+import Heading from '@/components/Heading';
 import ProjectTabs from '@/components/ProjectTabs';
 import { generateImagesLink } from '@/utils/tools';
 import { containerVariants, itemsVariants } from '@/utils/variants';
@@ -49,36 +50,38 @@ const Projects = () => {
   });
 
   return (
-    <motion.div
-      className='px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden'
-      variants={containerVariants}
-      initial='hidden'
-      whileInView='inView'
-      viewport={{
-        once: true,
-      }}
+    <div
+      id='projects'
+      className='px-4 min-h-screen py-24 md:py-36 bg-gradient-to-r from-slate-950 to-black'
     >
-      <motion.h2
-        className='text-3xl md:text-4xl text-center bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 block text-transparent bg-clip-text'
-        variants={itemsVariants}
-        transition={{
-          delay: 1,
+      <motion.div
+        className='flex flex-col items-center overflow-hidden'
+        variants={containerVariants}
+        initial='hidden'
+        whileInView='inView'
+        viewport={{
+          once: true,
         }}
       >
-        My Projects
-      </motion.h2>
-      <div className='my-20'>
-        <ProjectTabs
-          projects={projects}
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        />
-        <Carousel
-          projects={projects}
-          selectedTab={selectedTab}
-        />
-      </div>
-    </motion.div>
+        <Heading
+          variants={itemsVariants}
+          type='gradient'
+        >
+          My Projects
+        </Heading>
+        <div className='my-20'>
+          <ProjectTabs
+            projects={projects}
+            selectedTab={selectedTab}
+            setSelectedTab={setSelectedTab}
+          />
+          <Carousel
+            projects={projects}
+            selectedTab={selectedTab}
+          />
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
