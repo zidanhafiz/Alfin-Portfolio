@@ -6,14 +6,15 @@ export const metadata: Metadata = {
   title: 'Alfin Ilham Maulidi | Portfolio',
   description: "Alfin's personal portfolio website.",
   openGraph: {
+    url: 'https://alfinilham.vercel.app',
     images: [
       {
-        url: '/opengraph-image.png',
+        url: './opengraph-image.png',
         width: 800,
         height: 600,
       },
       {
-        url: '/opengraph-image.png',
+        url: './opengraph-image.png',
         width: 1800,
         height: 1600,
         alt: 'My custom alt',
