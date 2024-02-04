@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: 'Alfin Ilham Maulidi | Portfolio',
   description: "Alfin's personal portfolio website.",
   openGraph: {
+    title: 'Alfin Ilham Maulidi | Portfolio',
+    description: "Alfin's personal portfolio website.",
     url: 'https://alfinilham.vercel.app',
     images: [
       {
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
         alt: 'My custom alt',
       },
     ],
+    locale: 'id_ID',
     type: 'website',
   },
 };
