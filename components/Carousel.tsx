@@ -1,8 +1,8 @@
 'use client';
 import type { Project, SelectedTab } from '@/app/Projects';
 import ImagesContainer from './ImagesContainer';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 type CarouselProps = {
   projects: Project[];
@@ -11,6 +11,8 @@ type CarouselProps = {
 
 const Carousel = ({ projects, selectedTab }: CarouselProps) => {
   const [positionX, setPositionX] = useState<number>(selectedTab.index);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   useEffect(() => {
     switch (selectedTab.index) {
@@ -30,9 +32,12 @@ const Carousel = ({ projects, selectedTab }: CarouselProps) => {
   }, [selectedTab]);
 
   return (
-    <div className='w-screen'>
+    <div
+      ref={ref}
+      className='w-screen'
+    >
       <div className='flex w-max'>
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <motion.div
             key={project.name}
             initial={{ x: positionX }}
@@ -45,7 +50,7 @@ const Carousel = ({ projects, selectedTab }: CarouselProps) => {
           >
             <ImagesContainer
               images={project.links}
-              index={index}
+              isInView={isInView}
             />
           </motion.div>
         ))}

@@ -4,17 +4,16 @@ import { containerVariants, itemsVariants } from '@/utils/variants';
 
 type ImagesContainerProps = {
   images: string[];
-  index: number;
+  isInView: boolean;
 };
 
-const ImagesContainer = ({ images, index }: ImagesContainerProps) => {
+const ImagesContainer = ({ images, isInView }: ImagesContainerProps) => {
   return (
     <motion.div
       className='w-screen flex flex-wrap items-center justify-center gap-x-3 gap-y-4 md:gap-4'
       variants={containerVariants}
-      initial={index === 0 ? 'hidden' : 'inView'}
-      whileInView='inView'
-      viewport={{ once: true }}
+      initial='hidden'
+      animate={isInView ? 'inView' : 'hidden'}
     >
       {images.map((image, index) => (
         <motion.a

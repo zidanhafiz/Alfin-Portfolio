@@ -25,18 +25,15 @@ const tabsLabelVariants = {
 const ProjectTabs = ({ projects, selectedTab, setSelectedTab }: ProjectTabsProps) => {
   return (
     <motion.ul
-      className='flex justify-center items-end gap-2 md:gap-4'
+      className='flex justify-center items-end gap-2 md:gap-4 mb-16'
       variants={containerVariants}
       initial='hidden'
       whileInView='inView'
-      viewport={{
-        once: true,
-      }}
     >
       {projects.map((project, index) => (
         <motion.li
           key={index}
-          className='mb-16 text-center text-base md:text-lg  relative cursor-pointer'
+          className='text-center text-base md:text-lg relative cursor-pointer'
           variants={itemsVariants_2}
           transition={{
             duration: 0.5,
