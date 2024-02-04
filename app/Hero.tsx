@@ -101,32 +101,34 @@ const ImageColumn = () => {
 
 const SosmedColumn = () => {
   return (
-    <motion.ul
-      className='row-start-3 flex justify-center gap-10'
-      variants={containerVariants}
-      initial='hidden'
-      whileInView='inView'
-      viewport={{ once: true }}
-    >
+    <>
       <SvgGradient />
-      {contactsList.map((contact, index) => (
-        <motion.li
-          key={index}
-          variants={itemsVariants_2}
-          transition={{
-            duration: 0.7,
-          }}
-        >
-          <a
-            href={contact.link}
-            target='_blank'
-            className='text-lg'
+      <motion.ul
+        className='row-start-3 flex justify-center gap-10'
+        variants={containerVariants}
+        initial='hidden'
+        whileInView='inView'
+        viewport={{ once: true }}
+      >
+        {contactsList.map((contact, index) => (
+          <motion.li
+            key={index}
+            variants={itemsVariants_2}
+            transition={{
+              duration: 0.7,
+            }}
           >
-            {contact.logo('url(#blue-gradient)')}
-          </a>
-        </motion.li>
-      ))}
-    </motion.ul>
+            <a
+              href={contact.link}
+              target='_blank'
+              className='text-lg'
+            >
+              {contact.logo('url(#blue-gradient)')}
+            </a>
+          </motion.li>
+        ))}
+      </motion.ul>
+    </>
   );
 };
 
