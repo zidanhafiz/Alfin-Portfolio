@@ -1,38 +1,10 @@
 'use client';
-import { inter } from '@/utils/fonts';
-import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FaFacebook } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { FaTiktok } from 'react-icons/fa';
 import SvgGradient from '@/components/SvgGradient';
 import { containerVariants, itemsVariants, itemsVariants_2 } from '@/utils/variants';
-
-type SosMedList = {
-  logo: () => JSX.Element;
-  link: string;
-};
-
-const sosMedList: SosMedList[] = [
-  {
-    logo: () => <FaFacebook style={{ fill: 'url(#blue-gradient)' }} />,
-    link: 'https://facebook.com',
-  },
-  {
-    logo: () => <FaInstagram style={{ fill: 'url(#blue-gradient)' }} />,
-    link: 'https://instagram.com',
-  },
-  {
-    logo: () => <FaXTwitter style={{ fill: 'url(#blue-gradient)' }} />,
-    link: 'https://twitter.com',
-  },
-  {
-    logo: () => <FaTiktok style={{ fill: 'url(#blue-gradient)' }} />,
-    link: 'https://tiktok.com',
-  },
-];
+import { contactsList } from './Contact';
+import Button from '@/components/Button';
 
 const imgVariants = {
   hidden: {
@@ -47,115 +19,114 @@ const imgVariants = {
   },
 };
 
-const ctaVariants = {
-  init: {
-    y: 0,
-  },
-  inHover: {
-    y: -5,
-  },
-};
-
 const Hero = () => {
   return (
     <div
       id='home'
-      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen'
+      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen bg-gradient-to-tr from-black via-black to-slate-900'
     >
       <div className='row-start-2 px-5 md:mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
-        <motion.div
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='inView'
-          viewport={{ once: true }}
-        >
-          <motion.h1
-            className={clsx(
-              inter.className,
-              'bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 inline-block text-transparent bg-clip-text',
-              'text-center md:text-start text-3xl md:text-5xl md:leading-[1.2]'
-            )}
-            variants={itemsVariants}
-          >
-            Capturing moments with
-            <br /> Alfin Ilham Maulidi.
-          </motion.h1>
-          <motion.p
-            className='mt-4 text-gray-300 text-center md:text-start'
-            variants={itemsVariants}
-          >
-            Photograhy & Videography
-          </motion.p>
-
-          {/* Buttons Column */}
-          <motion.div
-            className='block mx-auto md:mx-0 w-fit mt-7 md:mt-10'
-            variants={itemsVariants}
-          >
-            <motion.button
-              className='bg-gradient-to-r from-purple-800 to-indigo-600 border border-transparent hover:border-white font-semibold px-4 py-2 rounded'
-              variants={ctaVariants}
-              initial='init'
-              whileHover='inHover'
-            >
-              Contact Me
-            </motion.button>
-            <motion.button
-              className='border font-semibold px-4 py-2 rounded ml-5 hover:bg-white hover:text-black transition-colors'
-              variants={ctaVariants}
-              initial='init'
-              whileHover='inHover'
-            >
-              My Projects
-            </motion.button>
-          </motion.div>
-        </motion.div>
-
-        {/* Image Column */}
-        <motion.div
-          variants={imgVariants}
-          initial='hidden'
-          whileInView='inView'
-          viewport={{ once: true }}
-        >
-          <Image
-            src='/images/hero-closeup.png'
-            alt='alfin'
-            width={800}
-            height={800}
-            className='w-[150px] md:w-[300px] rounded-full shadow-lg'
-          />
-        </motion.div>
+        <HeadingColumn />
+        <ImageColumn />
       </div>
-
-      {/* Sosmed Column */}
-      <motion.ul
-        className='row-start-3 flex justify-center gap-10'
-        variants={containerVariants}
-        initial='hidden'
-        whileInView='inView'
-        viewport={{ once: true }}
-      >
-        <SvgGradient />
-        {sosMedList.map((list) => (
-          <motion.li
-            key={list.link}
-            variants={itemsVariants_2}
-            transition={{
-              duration: 0.7,
-            }}
-          >
-            <a
-              href={list.link}
-              target='_blank'
-              className='text-lg'
-            >
-              {list.logo()}
-            </a>
-          </motion.li>
-        ))}
-      </motion.ul>
+      <SosmedColumn />
     </div>
+  );
+};
+
+const HeadingColumn = () => {
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      whileInView='inView'
+    >
+      <motion.h1
+        className='bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 inline-block text-transparent bg-clip-text text-center md:text-start text-3xl md:text-5xl md:leading-[1.2]'
+        variants={itemsVariants}
+      >
+        Capturing moments with
+        <br /> Alfin Ilham Maulidi.
+      </motion.h1>
+      <motion.p
+        className='mt-4 text-gray-300 text-center md:text-start'
+        variants={itemsVariants}
+      >
+        Photograhy & Videography
+      </motion.p>
+      <ButtonsColumn />
+    </motion.div>
+  );
+};
+
+const ButtonsColumn = () => {
+  return (
+    <motion.div
+      className='flex gap-x-5 mx-auto md:mx-0 w-fit mt-7 md:mt-10'
+      variants={itemsVariants}
+    >
+      <Button
+        type='gradient'
+        link='#contact'
+      >
+        Contact Me
+      </Button>
+      <Button
+        type='outline'
+        link='#projects'
+      >
+        My Projects
+      </Button>
+    </motion.div>
+  );
+};
+
+const ImageColumn = () => {
+  return (
+    <motion.div
+      variants={imgVariants}
+      initial='hidden'
+      whileInView='inView'
+    >
+      <Image
+        src='/images/hero-closeup.png'
+        alt='alfin'
+        width={800}
+        height={800}
+        className='w-[150px] md:w-[300px] rounded-full shadow-lg'
+      />
+    </motion.div>
+  );
+};
+
+const SosmedColumn = () => {
+  return (
+    <motion.ul
+      className='row-start-3 flex justify-center gap-10'
+      variants={containerVariants}
+      initial='hidden'
+      whileInView='inView'
+      viewport={{ once: true }}
+    >
+      <SvgGradient />
+      {contactsList.map((contact, index) => (
+        <motion.li
+          key={index}
+          variants={itemsVariants_2}
+          transition={{
+            duration: 0.7,
+          }}
+        >
+          <a
+            href={contact.link}
+            target='_blank'
+            className='text-lg'
+          >
+            {contact.logo('url(#blue-gradient)')}
+          </a>
+        </motion.li>
+      ))}
+    </motion.ul>
   );
 };
 
