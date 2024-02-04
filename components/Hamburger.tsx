@@ -1,16 +1,20 @@
+'use client';
+import { AnimatePresence, motion } from 'framer-motion';
+import { HiMenuAlt2 } from 'react-icons/hi';
+import { IoClose } from 'react-icons/io5';
+
 type HamburgerProps = {
   showMenuToggle: () => void;
+  isShow: boolean;
 };
 
-const Hamburger = ({ showMenuToggle }: HamburgerProps) => {
+const Hamburger = ({ showMenuToggle, isShow }: HamburgerProps) => {
   return (
     <div
-      className='md:hidden flex flex-col gap-y-2 w-fit p-2 cursor-pointer border border-transparent rounded-md transition hover:border-white'
+      className='md:hidden text-4xl w-fit p-1 cursor-pointer border border-transparent rounded-md transition hover:border-white'
       onClick={showMenuToggle}
     >
-      <div className='h-1 w-8 rounded-sm bg-white'></div>
-      <div className='h-1 w-8 rounded-sm bg-white'></div>
-      <div className='h-1 w-8 rounded-sm bg-white'></div>
+      {isShow ? <IoClose /> : <HiMenuAlt2 />}
     </div>
   );
 };
