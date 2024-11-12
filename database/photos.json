@@ -273,5 +273,45 @@
     "id": "56",
     "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345017/alfin/images/typho/05.png",
     "category": "graphics design"
+  },
+  {
+    "id": "57",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436906/alfin/images/product/IMG_6918_ygr99n.jpg",
+    "category": "product"
+  },
+  {
+    "id": "58",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436907/alfin/images/product/IMG_9660_honh5c.jpg",
+    "category": "product"
+  },
+  {
+    "id": "60",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436909/alfin/images/product/IMG_0270_wcl4bw.jpg",
+    "category": "product"
+  },
+  {
+    "id": "62",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436912/alfin/images/product/IMG_6042_nweqou.jpg",
+    "category": "product"
+  },
+  {
+    "id": "63",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436913/alfin/images/product/IMG_6914_jku2jk.jpg",
+    "category": "product"
+  },
+  {
+    "id": "66",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731436918/alfin/images/product/IMG_6951_vh9zad.png",
+    "category": "product"
+  },
+  {
+    "id": "67",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731438037/alfin/images/product/IMG_9848_typb9z.jpg",
+    "category": "product"
+  },
+  {
+    "id": "68",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731438037/alfin/images/product/IMG_1869_p8zl5g.jpg",
+    "category": "product"
   }
 ]

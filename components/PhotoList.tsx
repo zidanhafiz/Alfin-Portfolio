@@ -8,7 +8,7 @@ import { containerVariants, itemsVariants } from "@/utils/variants";
 const categories = ["building", "nature", "human interest", "graphics design", "product"];
 
 const PhotoList = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("building");
+  const [activeCategory, setActiveCategory] = useState<string>("human interest");
   const [photos, setPhotos] = useState<any[]>([]);
 
   useEffect(() => {
