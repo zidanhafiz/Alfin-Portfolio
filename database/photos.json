@@ -1,0 +1,277 @@
+[
+  {
+    "id": "1",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344618/alfin/images/building/01.jpg",
+    "category": "building"
+  },
+  {
+    "id": "2",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344619/alfin/images/building/02.png",
+    "category": "building"
+  },
+  {
+    "id": "3",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344619/alfin/images/building/03.png",
+    "category": "building"
+  },
+  {
+    "id": "4",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344619/alfin/images/building/04.png",
+    "category": "building"
+  },
+  {
+    "id": "5",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344619/alfin/images/building/05.png",
+    "category": "building"
+  },
+  {
+    "id": "6",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344619/alfin/images/building/06.png",
+    "category": "building"
+  },
+  {
+    "id": "7",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346835/alfin/images/building/IMG_20241111_211323.956.png",
+    "category": "building"
+  },
+  {
+    "id": "8",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346834/alfin/images/building/IMG_20241111_211054.280.png",
+    "category": "building"
+  },
+  {
+    "id": "9",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346831/alfin/images/building/IMG_20240821_131508.937.png",
+    "category": "building"
+  },
+  {
+    "id": "10",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346830/alfin/images/building/IMG_20240821_131414.525.png",
+    "category": "building"
+  },
+  {
+    "id": "11",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344817/alfin/images/nature/03.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "12",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344816/alfin/images/nature/04.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "14",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346796/alfin/images/nature/IMG_20240821_130637.652.png",
+    "category": "nature"
+  },
+  {
+    "id": "15",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346798/alfin/images/nature/IMG_20240821_130759.680.png",
+    "category": "nature"
+  },
+  {
+    "id": "16",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344815/alfin/images/nature/02.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "17",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344817/alfin/images/nature/05.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "18",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346800/alfin/images/nature/IMG_20240821_130828.512.png",
+    "category": "nature"
+  },
+  {
+    "id": "19",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346793/alfin/images/nature/IMG_20240821_131527.438.png",
+    "category": "nature"
+  },
+  {
+    "id": "20",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344815/alfin/images/nature/06.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "21",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344814/alfin/images/nature/01.jpg",
+    "category": "nature"
+  },
+  {
+    "id": "22",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346729/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.09_2e3faa28.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "23",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346732/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.10_fb6e0e73.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "24",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346739/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.13_3aad62ea.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "25",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346736/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.12_37033eae.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "26",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346735/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.11_75f32a6e.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "27",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346728/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.08_81a2c2e9.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "28",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346725/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.06_27f4e8bd.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "29",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346726/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.07_0faebb76.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "30",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346740/alfin/images/human-intereset/WhatsApp_Image_2024-11-12_at_00.37.14_8ec9ae76.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "31",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346497/alfin/images/human-intereset/DSC03337-173.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "32",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346494/alfin/images/human-intereset/P1127015-16.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "33",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346496/alfin/images/human-intereset/DSC02565-108_1.jpg",
+    "category": "human interest"
+  },
+  {
+    "id": "34",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346492/alfin/images/human-intereset/IMG_20240821_131513.584.png",
+    "category": "human interest"
+  },
+  {
+    "id": "35",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346491/alfin/images/human-intereset/IMG_20240821_131440.427.png",
+    "category": "human interest"
+  },
+  {
+    "id": "36",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346490/alfin/images/human-intereset/IMG_20240821_131409.010.png",
+    "category": "human interest"
+  },
+  {
+    "id": "37",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346487/alfin/images/human-intereset/IMG_20240821_131501.812.png",
+    "category": "human interest"
+  },
+  {
+    "id": "38",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346486/alfin/images/human-intereset/IMG_20240821_131243.594.png",
+    "category": "human interest"
+  },
+  {
+    "id": "39",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346235/alfin/images/design-graph/2_20240119_163039_0001.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "40",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346235/alfin/images/design-graph/2_20240119_170259_0001.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "41",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346234/alfin/images/design-graph/1_20240119_170259_0000.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "42",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346235/alfin/images/design-graph/1_20240119_163039_0000.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "43",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346356/alfin/images/design-graph/WhatsApp_Image_2024-11-12_at_00.31.29_c082d12c.jpg",
+    "category": "graphics design"
+  },
+  {
+    "id": "44",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346356/alfin/images/design-graph/WhatsApp_Image_2024-11-12_at_00.31.30_29308fdf.jpg",
+    "category": "graphics design"
+  },
+  {
+    "id": "45",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731346358/alfin/images/design-graph/WhatsApp_Image_2024-11-12_at_00.31.28_91f0a558.jpg",
+    "category": "graphics design"
+  },
+  {
+    "id": "46",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344909/alfin/images/product/01.png",
+    "category": "product"
+  },
+  {
+    "id": "47",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344906/alfin/images/product/02.jpg",
+    "category": "product"
+  },
+  {
+    "id": "48",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344910/alfin/images/product/03.png",
+    "category": "product"
+  },
+  {
+    "id": "49",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344906/alfin/images/product/04.jpg",
+    "category": "product"
+  },
+  {
+    "id": "50",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344907/alfin/images/product/05.jpg",
+    "category": "product"
+  },
+  {
+    "id": "51",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731344907/alfin/images/product/06.jpg",
+    "category": "product"
+  },
+  {
+    "id": "52",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345016/alfin/images/typho/01.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "53",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345018/alfin/images/typho/02.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "54",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345019/alfin/images/typho/03.png",
+    "category": "graphics design"
+  },
+  {
+    "id": "55",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345016/alfin/images/typho/04.jpg",
+    "category": "graphics design"
+  },
+  {
+    "id": "56",
+    "url": "https://res.cloudinary.com/zen-coffee/image/upload/v1731345017/alfin/images/typho/05.png",
+    "category": "graphics design"
+  }
+]
