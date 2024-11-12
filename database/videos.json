@@ -1,0 +1,63 @@
+[
+  {
+    "id": "4",
+    "title": "Showreel Sony Alphafest 2024",
+    "url": "https://www.youtube.com/embed/zmLh6aG-luk?si=CnkXhd03IYVEYicb",
+    "description": "As a videographer, I felt challenged to participate in \"Alphafest 2024,\" an event requiring photo or video submissions. Motivated by the chance to win prizes, I encourage others to join with the phrase \"I come come.\"",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "category": "Short Film"
+  },
+  {
+    "id": "3",
+    "title": "Meretas Isu Sosial Melalui Lensa Kreatif",
+    "url": "https://www.youtube.com/embed/-vC9_M7Wnt4?si=YhKehe5Wm2BoeqjY",
+    "description": "Alan, initially obsessed with social media, experiences a loss of identity due to overuse. After disconnecting, he gains free time, reconnects with friends, learns new skills, and feels happier in the real world.",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "talent": "Alan",
+    "category": "Short Film"
+  },
+  {
+    "id": "1",
+    "title": "Masjid al-Furqon",
+    "url": "https://www.youtube.com/embed/10e8xXk8Stk?si=GTgK4ui0PXDzNRzR",
+    "description": "Masjid Al Furqon, established in 2003, has grown into a community worship center with continuously improved facilities. In addition to regular activities, it offers a TPA program and social initiatives like support for orphans. The congregation shares a collective hope for the construction of a mosque to enhance comfort during worship.",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "category": "Documentary"
+  },
+  {
+    "id": "2",
+    "title": "MIGP Olahan Bakso",
+    "url": "https://www.youtube.com/embed/5IaXVQXZETg?si=3fJfON3Eg1ufsJEl",
+    "description": "The speaker discusses their bakso business in Malang, highlighting its high meat content (70% meat, 30% starch) as a unique selling point. They’ve received funding from YBM and plan to expand into a PT company. The audience is invited to try their bakso at BSD.",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "category": "Documentary"
+  },
+  {
+    "id": "5",
+    "title": "Dokumenter Kawal Putusan MK",
+    "url": "https://www.youtube.com/embed/0fPXXSANITM?si=UucXfhsTOjJWVhIC",
+    "description": "A documentary about the monitoring of the MK decision in the 2024 elections.",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "category": "Documentary"
+  },
+  {
+    "id": "6",
+    "title": "Dokumenter MI Nurul Falah",
+    "url": "https://www.youtube.com/embed/eF6ANvIpClU?si=OCRLuQ0hVQ9HvUE3",
+    "description": "MI Nurul Fa has 166 students across six grades, but its deteriorating infrastructure is a major issue. Leaking roofs and flooding disrupt classes, with four rooms urgently needing repairs. Financial constraints hinder immediate fixes, but students and teachers are working together to improve the school's condition.",
+    "director": "Alfin Ilham",
+    "editor": "Alfin Ilham",
+    "color_grading": "Alfin Ilham",
+    "category": "Documentary"
+  }
+]

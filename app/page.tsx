@@ -1,10 +1,10 @@
-import Navbar from '@/components/Navbar';
-import Hero from './Hero';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
-import Contact from './Contact';
-import Footer from './Footer';
+import Navbar from "@/components/Navbar";
+import Hero from "./Hero";
+import About from "./About";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -12,9 +12,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Projects />
-        <Skills />
+        <About />
         <Contact />
       </main>
       <Footer />

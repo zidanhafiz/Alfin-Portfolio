@@ -37,3 +37,12 @@ export const itemsVariants_2 = {
     x: 0,
   },
 };
+
+export const ctaVariants = {
+  init: {
+    y: 0,
+  },
+  inHover: {
+    y: -5,
+  },
+};

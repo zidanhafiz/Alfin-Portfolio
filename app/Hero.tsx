@@ -1,10 +1,9 @@
-'use client';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import SvgGradient from '@/components/SvgGradient';
-import { containerVariants, itemsVariants, itemsVariants_2 } from '@/utils/variants';
-import { contactsList } from './Contact';
-import Button from '@/components/Button';
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import SvgGradient from "@/components/SvgGradient";
+import { containerVariants, ctaVariants, itemsVariants, itemsVariants_2 } from "@/utils/variants";
+import { contactsList } from "./Contact";
 
 const imgVariants = {
   hidden: {
@@ -23,9 +22,9 @@ const Hero = () => {
   return (
     <div
       id='home'
-      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen bg-gradient-to-tr from-black via-black to-slate-900'
+      className='grid grid-rows-[1fr, 2fr, 1fr] gap-4 place-items-center h-screen bg-gradient-to-tr from-black via-black to-neutral-800'
     >
-      <div className='row-start-2 px-5 md:mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-10 md:gap-32'>
+      <div className='row-start-2 px-5 md:mx-auto max-w-5xl flex flex-col-reverse lg:flex-row items-center lg:items-start gap-10 lg:gap-28'>
         <HeadingColumn />
         <ImageColumn />
       </div>
@@ -40,19 +39,37 @@ const HeadingColumn = () => {
       variants={containerVariants}
       initial='hidden'
       whileInView='inView'
+      className='max-w-[550px]'
+      viewport={{ once: true }}
     >
-      <motion.h1
-        className='bg-gradient-to-r from-purple-800 via-sky-200 to-indigo-300 inline-block text-transparent bg-clip-text text-center md:text-start text-3xl md:text-5xl md:leading-[1.2]'
+      <motion.div
+        className='flex items-center justify-center lg:justify-start gap-x-2 lg:gap-x-4 mb-3'
         variants={itemsVariants}
       >
-        Capturing moments with
-        <br /> Alfin Ilham Maulidi.
+        <motion.span
+          className='text-sm text-white/90 font-semibold border border-white/60 px-3 py-1 rounded-full'
+          variants={itemsVariants}
+        >
+          PHOTOGRAPHER
+        </motion.span>
+        <motion.span
+          className='text-sm text-white/90 font-semibold border border-white/60 px-3 py-1 rounded-full'
+          variants={itemsVariants}
+        >
+          VIDEOGRAPHER
+        </motion.span>
+      </motion.div>
+      <motion.h1
+        className='text-white text-center lg:text-start text-3xl lg:text-5xl md:leading-[1.2]'
+        variants={itemsVariants}
+      >
+        Capturing moments with Alfin Ilham Maulidi.
       </motion.h1>
       <motion.p
-        className='mt-4 text-gray-300 text-center md:text-start'
+        className='mt-4 text-gray-300 text-center lg:text-start'
         variants={itemsVariants}
       >
-        Photograhy & Videography
+        I am a freelancer in the fields of photography, videography, and creative design.
       </motion.p>
       <ButtonsColumn />
     </motion.div>
@@ -62,21 +79,28 @@ const HeadingColumn = () => {
 const ButtonsColumn = () => {
   return (
     <motion.div
-      className='flex gap-x-5 mx-auto md:mx-0 w-fit mt-7 md:mt-10'
+      className='flex gap-x-5 mx-auto lg:mx-0 w-fit mt-7 md:mt-10'
       variants={itemsVariants}
     >
-      <Button
-        type='gradient'
-        link='#contact'
+      <motion.a
+        variants={ctaVariants}
+        initial='init'
+        whileHover='inHover'
+        href='/resume.pdf'
+        target='_blank'
+        className='bg-white text-black px-6 py-2 rounded-md'
       >
-        Contact Me
-      </Button>
-      <Button
-        type='outline'
-        link='#projects'
+        My Resume
+      </motion.a>
+      <motion.a
+        variants={ctaVariants}
+        initial='init'
+        whileHover='inHover'
+        href='#projects'
+        className='bg-white/10 border border-white/40 text-white px-6 py-2 rounded-md backdrop-blur-md'
       >
-        My Projects
-      </Button>
+        Latest Projects
+      </motion.a>
     </motion.div>
   );
 };
@@ -87,13 +111,14 @@ const ImageColumn = () => {
       variants={imgVariants}
       initial='hidden'
       whileInView='inView'
+      viewport={{ once: true }}
     >
       <Image
-        src='/images/hero-closeup.png'
+        src='/images/profile.jpg'
         alt='alfin'
         width={800}
         height={800}
-        className='w-[150px] md:w-[300px] rounded-full shadow-lg'
+        className='w-[200px] h-[280px] md:w-[250px] lg:w-[600px] lg:h-[380px] object-cover object-[10%_70%] rounded-xl grayscale shadow-lg'
       />
     </motion.div>
   );
@@ -123,7 +148,7 @@ const SosmedColumn = () => {
               target='_blank'
               className='text-lg'
             >
-              {contact.logo('url(#blue-gradient)')}
+              {contact.logo()}
             </a>
           </motion.li>
         ))}

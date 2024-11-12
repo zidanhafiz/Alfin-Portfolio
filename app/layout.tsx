@@ -1,29 +1,18 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { inter } from '@/utils/fonts';
+import type { Metadata } from "next";
+import "./globals.css";
+import { inter } from "@/utils/fonts";
 
 export const metadata: Metadata = {
-  title: 'Alfin Ilham Maulidi | Portfolio',
+  metadataBase: new URL("https://alfinilham.vercel.app"),
+  title: "Alfin Ilham Maulidi | Portfolio",
   description: "Alfin's personal portfolio website.",
   openGraph: {
-    title: 'Alfin Ilham Maulidi | Portfolio',
+    title: "Alfin Ilham Maulidi | Portfolio",
     description: "Alfin's personal portfolio website.",
-    url: 'https://alfinilham.vercel.app',
-    images: [
-      {
-        url: './opengraph-image.png',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: './opengraph-image.png',
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
-      },
-    ],
-    locale: 'id_ID',
-    type: 'website',
+    url: "https://alfinilham.vercel.app",
+    images: "/opengraph-image.png",
+    locale: "id_ID",
+    type: "website",
   },
 };
 
